@@ -5,7 +5,6 @@ from peewee import (
     FloatField,
     IntegerField,
     Model,
-    TextField,
 )
 from playhouse.sqlite_ext import JSONField
 
@@ -25,7 +24,6 @@ class Event(Model):  # type: ignore[misc]
     )  # TODO remove when columns can be dropped without rebuilding table
     false_positive = BooleanField()
     zones = JSONField()
-    thumbnail = TextField()
     has_clip = BooleanField(default=True)
     has_snapshot = BooleanField(default=True)
     region = (

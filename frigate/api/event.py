@@ -192,9 +192,6 @@ def events():
     if in_progress is not None:
         clauses.append((Event.end_time.is_null(in_progress)))
 
-    if include_thumbnails:
-        selected_columns.append(Event.thumbnail)
-
     if favorites:
         clauses.append((Event.retain_indefinitely == favorites))
 
